@@ -1,0 +1,479 @@
+/*导航栏*/
+.top-bar-wrapper {
+  background-color: #26262E;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.top-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #26262E;
+}
+.top-bar .right-menu .nav .success-login {
+  position: relative;
+}
+.top-bar .right-menu .nav .success-login .success-login-type {
+  min-width: 45px;
+  min-height: 50px;
+  top: 50px;
+  position: absolute;
+  display: none;
+  text-align: center;
+}
+.top-bar .right-menu .nav .success-login .success-login-type li a {
+  margin-top: 0;
+}
+.top-bar .right-menu .nav .success-login .success-login-type li a:hover {
+  color: #F1EF36;
+}
+.gd {
+  width: 650px;
+  height: 70px;
+  background-color: #26262E;
+}
+.logo a {
+  width: 100px;
+  height: 50px;
+}
+@media only screen {
+}
+@media only screen and (min-width: 991px) {
+  .right-menu {
+    flex: auto;
+  }
+  .right-menu .nav {
+    list-style-type: none;
+    display: flex!important;
+    position: static!important;
+    margin-bottom: 10px;
+  }
+  .right-menu .nav li {
+    width: auto;
+  }
+  .right-menu .nav li a {
+    text-align: right;
+    cursor: pointer;
+    font-size: 15px!important;
+  }
+  .right-menu .menu-icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container-max {
+    flex-direction: column;
+  }
+  .container-max .fontLeft {
+    padding-left: 140px;
+  }
+  .container-max .fontLeft .notion {
+    padding-left: 50px!important;
+    padding-top: 0px!important;
+  }
+  .container-max .fontLeft .WebTitle {
+    font-size: 20px!important;
+    margin-top: -10px !important;
+  }
+  .container-max .fontLeft .total-ErrorNumber {
+    padding-left: 35px;
+    font-size: 16px;
+  }
+  .container-max .fontLeft .ErrorNumber input {
+    font-size: 18px!important;
+  }
+  .container-max .fontLeft .button-style {
+    padding-top: 8px!important;
+    padding-left: 80px!important;
+  }
+  .container-max .fontLeft .test-used {
+    padding-top: 2px!important;
+  }
+  .user-case-container {
+    flex-direction: column;
+  }
+  .user-case-container .row .item img {
+    padding-left: 0!important;
+    max-width: 90%;
+  }
+  .user-case-container .title {
+    width: 100%;
+    padding-top: 21px!important;
+  }
+  .productContentWrapper {
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 120px;
+  }
+  .productContentWrapper .productContent {
+    display: flex;
+  }
+  .user-behavior {
+    flex-direction: column;
+  }
+  .user-behavior .user-behavior-image {
+    margin: 0 15px;
+  }
+  .user-behavior .user-behavior-people {
+    display: none;
+  }
+  .user-behavior .user-behavior-text {
+    margin: 0 auto;
+    height: 180px!important;
+  }
+  .source-behavior {
+    flex-direction: column;
+  }
+  .source-behavior .source-behavior-image {
+    margin: 0 15px;
+  }
+  .source-behavior .source-behavior-people {
+    display: none;
+  }
+  .source-behavior .source-behavior-text {
+    height: 180px!important;
+    margin: 0 auto;
+  }
+  .something .newItems {
+    padding-left: 70px;
+    margin: 90px calc((82vw - 960px)/2) 60px !important;
+  }
+  .something .newItems .leftMargin {
+    margin-right: 10px!important;
+  }
+  .something .newItems .middleMargin {
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+  }
+  .something .newItems .rightMargin {
+    margin-left: 10px!important;
+  }
+  .footContainer .footerContent {
+    padding-left: 20px;
+    margin: 0 110px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .user-behavior {
+    padding-left: 70px!important;
+    width: 100%;
+  }
+  .user-behavior .user-behavior-image {
+    width: 372px!important;
+    height: 240px!important;
+    overflow: hidden;
+  }
+  .user-behavior .user-behavior-image .user-behaviorHeader {
+    margin-left: 55px!important;
+    padding-top: 5px!important;
+  }
+  .user-behavior .user-behavior-image .user-behaviorHeader img {
+    padding-top: 5px!important;
+    margin-left: 60px!important;
+  }
+  .user-behavior .user-behavior-image .user-behaviorBg {
+    width: 310px;
+    margin-left: 55px!important;
+    height: 193px;
+  }
+  .user-behavior .user-behavior-image .user-behaviorBg img {
+    width: 300px;
+    transform: translateY(0);
+    animation: autoScrollMobile 10s infinite ease;
+    animation-delay: 1s;
+    vertical-align: middle;
+  }
+  .user-behavior .user-behavior-text {
+    height: 100% !important;
+    padding-top: 30px!important;
+    padding-bottom: 20px!important;
+  }
+  .source-behavior {
+    padding-left: 70px!important;
+    width: 100%;
+  }
+  .source-behavior .source-behavior-image {
+    width: 372px!important;
+    height: 240px!important;
+    overflow: hidden;
+  }
+  .source-behavior .source-behavior-text {
+    height: 100% !important;
+    padding-top: 30px!important;
+    padding-bottom: 20px!important;
+  }
+  .something {
+    height: 1000px!important;
+  }
+  .something .newItems {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 900px!important;
+  }
+  .something .newItems .leftMargin {
+    margin-left: 320px!important;
+  }
+  .something .newItems .middleMargin {
+    margin-left: 320px!important;
+  }
+  .something .newItems .rightMargin {
+    margin-left: 320px!important;
+  }
+  .something .contentBg {
+    margin: 10px calc((100vw - 300px)/2);
+  }
+}
+.right-menu.active .nav {
+  display: block;
+}
+.right-menu .nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  background-color: #26262E;
+}
+.right-menu .nav li {
+  width: 72%;
+  margin: 0 auto;
+}
+.right-menu .nav li a {
+  margin-top: 10px;
+  font-weight: 400;
+  display: block;
+  line-height: 44px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.right-menu .nav li a:hover {
+  color: #F1EF36;
+}
+.right-menu .menu-icon {
+  width: 30px;
+  height: 70px;
+  position: relative;
+}
+.right-menu .menu-icon li {
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  background-color: #ffffff;
+  transform-origin: left center;
+  transition: 0.3s;
+}
+.right-menu .menu-icon li:nth-child(1) {
+  top: 24px;
+}
+.right-menu .menu-icon li:nth-child(2) {
+  top: 35px;
+}
+.right-menu .menu-icon li:nth-child(3) {
+  top: 46px;
+}
+.right-menu .menu-icon.active li:nth-child(1) {
+  transform: rotate(46deg);
+}
+.right-menu .menu-icon.active li:nth-child(2) {
+  opacity: 0;
+}
+.right-menu .menu-icon.active li:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.setting {
+  min-height: 100vh;
+  min-width: 1296px;
+  background-color: #F4F4F4;
+}
+.setting .settingDashboardParentView {
+  width: 1096px;
+  margin: 68px auto 0;
+  display: flex;
+}
+.setting .settingDashboardViewTags {
+  width: 240px;
+  height: 240px;
+  background: #fff;
+  border-radius: 6px;
+}
+.setting .settingDashboardViewTags ul {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.setting .settingDashboardViewTags ul li {
+  display: flex;
+  padding: 10px 0;
+  list-style-type: none;
+  cursor: pointer;
+  border-bottom: 1px solid #EEE;
+}
+.setting .settingDashboardViewTags ul li .AccountIcon {
+  background: url("https://www.fundebug.com/assets/images/setting/account.4b8a2cec.svg") no-repeat;
+}
+.setting .settingDashboardViewTags ul li .SettingIcon {
+  width: 32px;
+  height: 32px;
+  margin: 4px 26px;
+}
+.setting .settingDashboardViewTags ul li .SettingType {
+  font-size: 18px;
+  color: #333;
+  padding-top: 8px;
+}
+.setting .settingDashboardViewTags ul li .TeamIcon {
+  background: url("https://www.fundebug.com/assets/images/setting/team.dcf1f6d4.svg") no-repeat;
+}
+.setting .settingDashboardViewTags ul li .ProjectIcon {
+  background: url("https://www.fundebug.com/assets/images/setting/project.f4086fc7.svg") no-repeat;
+}
+.setting .settingDashboardViewTags ul li .ConsumptionIcon {
+  background: url("https://www.fundebug.com/assets/images/setting/consumption.fde768b3.svg") no-repeat;
+}
+.setting .settingDashboardViewTags ul li:last-child {
+  border-bottom: none;
+}
+.LeftMemberInfoContainer input {
+  margin-bottom: 15px;
+  height: 17px;
+  outline-style: none ;
+  border-radius: 3px;
+  padding: 13px 14px;
+  width: 375px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #F2F2F2;
+}
+.setting .settingDashboardParentView {
+  margin: 2px auto 0;
+}
+.setting .SettingInputSummit {
+  border: 1px solid #1ecd97;
+  color: #1ecd97;
+}
+.setting .SettingInputCancel {
+  border: 1px solid silver;
+  color: silver;
+}
+.setting .SettingDashboardView {
+  width: 800px;
+  margin-left: 54px;
+}
+.setting .SettingSection {
+  width: 800px;
+  height: 100%;
+  display: flex;
+  background: #fff;
+  border-radius: 6px;
+}
+.setting .SettingSection .Height56pxHeader {
+  width: 100%;
+  height: 600px;
+}
+.setting .SettingSection .Height56pxHeader .SettingTitle {
+  margin-bottom: 10px;
+  width: 100%;
+  color: #888;
+  font-size: 18px;
+}
+.setting .SettingSection .Height56pxHeader .PaddingLeft67Top17px {
+  padding: 17px 0 0 67px;
+}
+.setting .SettingSection .AccountContainer {
+  display: flex;
+  margin: 40px 67px;
+  width: 666px;
+  min-height: 300px;
+}
+.setting .SettingSection .AccountContainer .LeftMemberInfoContainer {
+  width: 400px;
+}
+.setting .SettingSection .AccountContainer .LeftMemberInfoContainer .ChangeCode {
+  width: 100%;
+  background: #00a680;
+  height: 44px!important;
+  margin-top: 30px!important;
+  font-size: 16px;
+  color: #fff !important;
+}
+.setting .SettingSection .AccountContainer .centerButtonContainer {
+  width: 116px;
+  height: 100%;
+}
+.setting .SettingSection .AccountContainer .centerButtonContainer .NicknameButton {
+  display: flex;
+  margin-top: 28px;
+  margin-left: 10px;
+}
+.setting .SettingSection .AccountContainer .centerButtonContainer .NicknameButton .SettingInputButton {
+  position: relative;
+  outline: 0;
+  height: 25px;
+  text-align: center;
+  width: 40px;
+  border-radius: 24px;
+  padding: 0;
+  background: #fff;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 0 2px;
+}
+.setting .SettingSection .AccountContainer .RightIcon {
+  width: 150px;
+  height: 200px;
+}
+.setting .SettingSection .AccountContainer .RightIcon .MemberIconContainer {
+  margin: 16px 0 67px;
+  width: 150px;
+  height: 150px;
+}
+.setting .SettingSection .AccountContainer .RightIcon .MemberIconContainer .MemberIcon {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-image: url("../img/yibaologin.jpg");
+}
+.setting .SettingSection .AccountContainer .RightIcon .IconBtn {
+  width: 100%;
+  background: #00a680;
+  height: 40px!important;
+  font-size: 16px;
+  padding: 0;
+  color: #fff;
+  border-radius: 4px;
+}
+.setting .SettingSection .AccountContainer .RightIcon .IconBtn input {
+  opacity: 0;
+  position: relative;
+}
+.setting .DisplayBlock {
+  display: inline-block !important;
+}
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+.HeaderBottomBorder {
+  border-bottom: 1px solid #eee;
+}
+.AccountContainer .RightIcon .IconBtn label {
+  cursor: pointer;
+  padding-left: 40px;
+}
+label {
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=team.css.map */

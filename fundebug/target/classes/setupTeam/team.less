@@ -1,0 +1,551 @@
+@baseColor : #00A680; //设置页面总体需要颜色
+@menuColor : #ffffff; //菜单字体颜色
+@errorColor : #F1EF36; //错误监听变化数量字体颜色
+@grayColor : #666;//灰色
+/*导航栏*/
+.top-bar-wrapper{
+  background-color: #26262E;
+  position: fixed;
+  top: 0px;right: 0;left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.top-bar{
+  //指定最大宽度
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #26262E;
+  .right-menu{
+    .nav{
+      .success-login{
+        position: relative;
+        .success-login-type{
+          min-width: 45px;
+          min-height: 50px;
+          top: 50px;
+          position: absolute;
+          display: none;
+          text-align: center;
+          li{
+            a{
+              margin-top: 0;
+              &:hover{
+                color: @errorColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.gd{
+  width: 650px;
+  height: 70px;
+  background-color: #26262E;
+}
+//图标logo OVER
+.logo{
+  a{
+    width: 100px;
+    height: 50px;
+  }
+}
+//设置媒体查询 OVER
+@media only screen{
+  //bar
+  //断点 991px
+  @media(min-width: 991px){
+    //隐藏菜单图标
+    .right-menu{
+      //菜单自动增长，利用富余空间
+      flex: auto;
+      //显示菜单
+      .nav{
+        list-style-type: none;
+        display: flex!important;
+        position: static!important;
+        margin-bottom: 10px;
+        li{
+          width: auto;
+          a{
+            text-align: right;
+            cursor: pointer;
+            font-size: 15px!important;
+          }
+        }
+      }
+      //关闭菜单图标
+      .menu-icon{
+        display: none;
+      }
+    }
+  }
+  //1200px
+  @media(max-width: 1200px){
+    //container-bug媒体查询
+    .container-max{
+      flex-direction: column;
+      .fontLeft{
+        padding-left: 140px;
+        .notion{
+          padding-left: 50px!important;
+          padding-top: 0px!important;
+        }
+        .WebTitle{
+          font-size: 20px!important;
+          margin-top: -10px!important;
+        }
+        .total-ErrorNumber{
+          padding-left: 35px;
+          font-size: 16px;
+        }
+        .ErrorNumber{
+          input{
+            font-size: 18px!important;
+          }
+        }
+        .button-style{
+          padding-top: 8px!important;
+          padding-left: 80px!important;
+        }
+        .test-used{
+          padding-top: 2px!important;
+        }
+      }
+    }
+    //付费客户媒体查询
+    .user-case-container{
+      flex-direction: column;
+      .row{
+        .item{
+          img{
+            padding-left: 0!important;
+            max-width: 90%;
+          }
+        }
+      }
+      .title{
+        width: 100%;
+        padding-top: 21px!important;
+      }
+    }
+    //全栈、实时、智能、安全媒体查询
+    .productContentWrapper{
+      flex-direction: column;
+      margin: 0 auto;
+      padding-left: 120px;
+      //设置排版方式
+      .productContent{
+        display: flex;
+      }
+    }
+    //用户行为媒体查询
+    .user-behavior{
+      flex-direction: column;
+      .user-behavior-image{
+        margin: 0 15px;
+      }
+      .user-behavior-people{
+        display: none;
+      }
+      .user-behavior-text{
+        margin: 0 auto;
+        height: 180px!important;
+      }
+    }
+    //source-bug 部分媒体查询
+    .source-behavior{
+      flex-direction: column;
+      .source-behavior-image{
+        margin: 0 15px;
+      }
+      .source-behavior-people{
+        display: none;
+      }
+      .source-behavior-text{
+        height: 180px!important;
+        margin: 0 auto;
+      }
+    }
+    //新闻1200px响应式
+    .something{
+      .newItems{
+        padding-left: 70px;
+        margin: 90px calc((82vw - 960px)/2) 60px!important;
+        .leftMargin{
+          margin-right: 10px!important;
+        }
+        .middleMargin{
+          margin-left: 10px!important;
+          margin-right: 10px!important;
+        }
+        .rightMargin{
+          margin-left: 10px!important;
+        }
+      }
+    }
+    //尾部响应式
+    .footContainer{
+      .footerContent{
+        padding-left: 20px;
+        margin: 0 110px;
+      }
+    }
+  }
+  //992px
+  @media(max-width: 991px){
+    //用户行为
+    .user-behavior{
+      padding-left: 70px!important;
+      width: 100%;
+      .user-behavior-image{
+        width: 372px!important;
+        height: 240px!important;
+        overflow: hidden;
+        .user-behaviorHeader{
+          margin-left: 55px!important;
+          padding-top: 5px!important;
+          img{
+            padding-top: 5px!important;
+            margin-left: 60px!important;
+          }
+        }
+        .user-behaviorBg{
+          width: 310px;
+          margin-left: 55px!important;
+          height: 193px;
+          img{
+            width: 300px;
+            transform: translateY(0);
+            animation: autoScrollMobile 10s infinite ease;
+            animation-delay: 1s;
+            vertical-align: middle;
+          }
+        }
+      }
+      .user-behavior-text{
+        height: 100% !important;
+        padding-top: 30px!important;
+        padding-bottom: 20px!important;
+      }
+    }
+    //source-bug 部分媒体查询
+    .source-behavior{
+      padding-left: 70px!important;
+      width: 100%;
+      .source-behavior-image{
+        width: 372px!important;
+        height: 240px!important;
+        overflow: hidden;
+      }
+      .source-behavior-text{
+        height: 100% !important;
+        padding-top: 30px!important;
+        padding-bottom: 20px!important;
+      }
+    }
+    //新闻992px响应式
+    .something{
+      height: 1000px!important;
+      .newItems{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        height: 900px!important;
+        .leftMargin{
+          margin-left: 320px!important;
+        }
+        .middleMargin{
+          margin-left: 320px!important;
+        }
+        .rightMargin{
+          margin-left: 320px!important;
+        }
+      }
+      .contentBg{
+        margin: 10px calc((100vw - 300px)/ 2);
+      }
+    }
+  }
+}
+//右侧导航栏 OVER
+.right-menu{
+  &.active{
+    .nav{
+      //显示隐藏菜单
+      display: block;
+    }
+  }
+  //设置菜单
+  .nav{
+    //使菜单背景充满整个屏幕
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    background-color: #26262E;
+    //z-index: 10000;
+    li{
+      //调整菜单内容距离
+      width: 72%;
+      margin: 0 auto;
+      a{
+        //设置菜单内容细节
+        margin-top: 10px;
+        font-weight: 400;
+        display: block;
+        line-height: 44px;
+        font-size: 20px;
+        text-decoration: none;
+        color: @menuColor;
+        vertical-align: middle;
+        &:hover{
+          color: @errorColor;
+        }
+      }
+    }
+  }
+  //菜单图标
+  .menu-icon{
+    width: 30px;
+    height: 70px;
+    position: relative;
+    //导航线
+    li{
+      width: 30px;
+      height: 4px;
+      position: absolute;
+      background-color: @menuColor;
+      //修改变性的原点
+      transform-origin: left center;
+      transition: 0.3s;
+    }
+    li:nth-child(1){
+      top: 24px;
+    }
+    li:nth-child(2){
+      top: 35px;
+    }
+    li:nth-child(3){
+      top: 46px;
+    }
+    &.active{
+      li:nth-child(1){
+        //向下旋转
+        transform: rotate(46deg);
+      }
+      li:nth-child(2){
+        //动态隐藏
+        opacity: 0;
+      }
+      li:nth-child(3){
+        //向上旋转
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+//中间部分样式
+.setting{
+  min-height: 100vh;
+  min-width: 1296px;
+  background-color: #F4F4F4;
+  .settingDashboardParentView {
+    width: 1096px;
+    margin: 68px auto 0;
+    display: flex;
+  }
+  .settingDashboardViewTags {
+    width: 240px;
+    height: 240px;
+    background: #fff;
+    border-radius: 6px;
+    ul{
+      margin-bottom: 10px;
+      margin-top: 0;
+      li{
+        display: flex;
+        padding: 10px 0;
+        list-style-type: none;
+        cursor: pointer;
+        border-bottom: 1px solid #EEE;
+        .AccountIcon{
+          background: url("https://www.fundebug.com/assets/images/setting/account.4b8a2cec.svg") no-repeat;
+        }
+        .SettingIcon{
+          width: 32px;
+          height: 32px;
+          margin: 4px 26px;
+        }
+        .SettingType {
+          font-size: 18px;
+          color: #333;
+          padding-top: 8px;
+        }
+        .TeamIcon{
+          background: url("https://www.fundebug.com/assets/images/setting/team.dcf1f6d4.svg") no-repeat;
+        }
+        .ProjectIcon{
+          background: url("https://www.fundebug.com/assets/images/setting/project.f4086fc7.svg") no-repeat;
+        }
+        .ConsumptionIcon{
+          background: url("https://www.fundebug.com/assets/images/setting/consumption.fde768b3.svg") no-repeat;
+        }
+        &:last-child{
+          border-bottom: none
+        }
+      }
+    }
+  }
+}
+
+//设置输入框美化
+.LeftMemberInfoContainer input{
+  margin-bottom: 15px;
+  height: 17px;
+  outline-style: none ;
+  border-radius: 3px;
+  padding: 13px 14px;
+  width: 375px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #F2F2F2;
+}
+
+.setting{
+  .settingDashboardParentView{
+    margin: 2px auto 0;
+  }
+  .SettingInputSummit{
+    border: 1px solid #1ecd97;
+    color: #1ecd97;
+  }
+  .SettingInputCancel{
+    border: 1px solid silver;
+    color: silver;
+  }
+  .SettingDashboardView {
+    width: 800px;
+    margin-left: 54px;
+  }
+  .SettingSection{
+    width: 800px;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    border-radius: 6px;
+    .Height56pxHeader{
+      width: 100%;
+      height: 600px;
+      .SettingTitle{
+        margin-bottom: 10px;
+        width: 100%;
+        color: #888;
+        font-size: 18px;
+      }
+      .PaddingLeft67Top17px{
+        padding: 17px 0 0 67px;
+      }
+    }
+    .AccountContainer{
+      display: flex;
+      margin: 40px 67px;
+      width: 666px;
+      min-height: 300px;
+      .LeftMemberInfoContainer {
+        width: 400px;
+        .ChangeCode{
+          width: 100%;
+          background: #00a680;
+          height: 44px!important;
+          margin-top: 30px!important;
+          font-size: 16px;
+          color:  #fff!important;;
+        }
+      }
+      .centerButtonContainer{
+        width: 116px;
+        height: 100%;
+        .NicknameButton{
+          display: flex;
+          margin-top: 28px;
+          margin-left: 10px;
+          .SettingInputButton{
+            position: relative;
+            outline: 0;
+            height: 25px;
+            text-align: center;
+            width: 40px;
+            border-radius: 24px;
+            padding: 0;
+            background: #fff;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .25s ease;
+            margin: 0 2px;
+          }
+        }
+      }
+      .RightIcon{
+        width: 150px;
+        height: 200px;
+        .MemberIconContainer{
+          margin: 16px 0 67px;
+          width: 150px;
+          height: 150px;
+          .MemberIcon{
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            background-image: url("../img/yibaologin.jpg");
+          }
+        }
+        .IconBtn{
+          width: 100%;
+          background: #00a680;
+          height: 40px!important;
+          font-size: 16px;
+          padding: 0;
+          color: #fff;
+          border-radius: 4px;
+          input{
+            opacity: 0;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+  .DisplayBlock {
+    display: inline-block!important;
+  }
+}
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+.HeaderBottomBorder{
+  border-bottom: 1px solid #eee;
+}
+.AccountContainer{
+  .RightIcon{
+    .IconBtn{
+      label{
+        cursor: pointer;
+        padding-left: 40px;
+      }
+    }
+  }
+}
+label{
+  max-width: 100%;
+  margin-bottom: 5px;
+}

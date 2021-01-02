@@ -1,0 +1,112 @@
+.leftJu{
+    padding-left: 430px;
+}
+.MarginTop16px {
+    margin-top: 16px;
+}
+.SettingSection {
+    width: 800px;
+    height: 200px;
+    background: #fff;
+    border-radius: 6px;
+}
+.DisplayBlock {
+    display: inline-block!important;
+}
+.SettingSection .Height56pxHeader {
+    width: 100%;
+    height: 56px;
+}
+.HeaderBottomBorder, .project-setting-tab-container .tab-content .bottom-border {
+    border-bottom: 1px solid #eee;
+}
+.PaddingLeft67Top17px {
+    padding: 17px 0 0 67px;
+}
+.SettingTitle {
+    width: 100%;
+    color: #888;
+    font-size: 18px;
+}
+.SettingSection .SettingPLTable {
+    display: table;
+    width: 100%;
+    white-space: nowrap;
+}
+.SettingSection .SettingPLTable .SettingPLTableRowHoverNone {
+    cursor: Default!important;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow {
+    display: table-row;
+    cursor: pointer;
+}
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow {
+    display: table-row;
+    cursor: pointer;
+}
+.SettingSection .SettingPLTable .SettingPLTableRowHoverNone {
+    cursor: Default!important;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow:last-child {
+    border-bottom: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.SettingSection .SettingPLTable .SettingPLTableRowHoverNone {
+    cursor: Default!important;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow {
+    display: table-row;
+    cursor: pointer;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell {
+    color: #6c6c72;
+    line-height: 44px;
+    display: table-cell;
+    vertical-align: middle;
+}
+img {
+    vertical-align: middle;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .SettingPLTableRowThirdLoginTypeName {
+    font-weight: 500;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .SettingPLTableRowThirdLoginTypeName .ThirdLoginUserName {
+    color: #2b81c1;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .CancelBindBtn {
+    background: #f49632;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .BindBtn {
+    color: white;
+    border-style: none;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .BindBtn:hover {
+    cursor: pointer;
+}
+.PaddingProjectIcon {
+    padding: 0 10px 0 67px!important;
+}
+.With25 {
+    width: .25rem!important;
+}
+.TextAlignRight {
+    text-align: right!important;
+}
+.PaddingRight67Px {
+    padding: 0 67px 0 1.25rem!important;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .SettingPLTableRowThirdLoginTypeName {
+    font-weight: 500;
+}
+.SettingSection .SettingPLTable .SettingPLTableRow .SettingPLTableRowCell .SettingPLTableRowThirdLoginTypeName .ThirdLoginUserName {
+    color: #2b81c1;
+}

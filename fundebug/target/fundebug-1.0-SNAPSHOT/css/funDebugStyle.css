@@ -1,0 +1,762 @@
+/*导航栏*/
+.top-bar-wrapper {
+  background-color: #00A680;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.top-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00A680;
+}
+.top-bar .right-menu .nav .success-login {
+  position: relative;
+}
+.top-bar .right-menu .nav .success-login .success-login-type {
+  min-width: 45px;
+  min-height: 50px;
+  top: 50px;
+  position: absolute;
+  display: none;
+  text-align: center;
+}
+.top-bar .right-menu .nav .success-login .success-login-type li a {
+  margin-top: 0;
+}
+.top-bar .right-menu .nav .success-login .success-login-type li a:hover {
+  color: #F1EF36;
+}
+.top-bar .right-menu .nav .success-login button.active ~ .success-login-type {
+  display: block;
+}
+.gd {
+  width: 480px;
+  height: 70px;
+  background-color: #00A680;
+}
+.logo a {
+  width: 100px;
+  height: 50px;
+}
+@media only screen {
+}
+@media only screen and (min-width: 991px) {
+  .right-menu {
+    flex: auto;
+  }
+  .right-menu .nav {
+    list-style-type: none;
+    display: flex!important;
+    position: static!important;
+    margin-bottom: 10px;
+  }
+  .right-menu .nav li {
+    width: auto;
+  }
+  .right-menu .nav li a {
+    text-align: right;
+    cursor: pointer;
+    font-size: 15px!important;
+  }
+  .right-menu .menu-icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container-max {
+    flex-direction: column;
+  }
+  .container-max .fontLeft {
+    padding-left: 140px;
+  }
+  .container-max .fontLeft .notion {
+    padding-left: 50px!important;
+    padding-top: 0px!important;
+  }
+  .container-max .fontLeft .WebTitle {
+    font-size: 20px!important;
+    margin-top: -10px !important;
+  }
+  .container-max .fontLeft .total-ErrorNumber {
+    padding-left: 35px;
+    font-size: 16px;
+  }
+  .container-max .fontLeft .ErrorNumber input {
+    font-size: 18px!important;
+  }
+  .container-max .fontLeft .button-style {
+    padding-top: 8px!important;
+    padding-left: 80px!important;
+  }
+  .container-max .fontLeft .test-used {
+    padding-top: 2px!important;
+  }
+  .user-case-container {
+    flex-direction: column;
+  }
+  .user-case-container .row .item img {
+    padding-left: 0!important;
+    max-width: 90%;
+  }
+  .user-case-container .title {
+    width: 100%;
+    padding-top: 21px!important;
+  }
+  .productContentWrapper {
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 120px;
+  }
+  .productContentWrapper .productContent {
+    display: flex;
+  }
+  .user-behavior {
+    flex-direction: column;
+  }
+  .user-behavior .user-behavior-image {
+    margin: 0 15px;
+  }
+  .user-behavior .user-behavior-people {
+    display: none;
+  }
+  .user-behavior .user-behavior-text {
+    margin: 0 auto;
+    height: 180px!important;
+  }
+  .source-behavior {
+    flex-direction: column;
+  }
+  .source-behavior .source-behavior-image {
+    margin: 0 15px;
+  }
+  .source-behavior .source-behavior-people {
+    display: none;
+  }
+  .source-behavior .source-behavior-text {
+    height: 180px!important;
+    margin: 0 auto;
+  }
+  .something .newItems {
+    padding-left: 70px;
+    margin: 90px calc((82vw - 960px)/2) 60px !important;
+  }
+  .something .newItems .leftMargin {
+    margin-right: 10px!important;
+  }
+  .something .newItems .middleMargin {
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+  }
+  .something .newItems .rightMargin {
+    margin-left: 10px!important;
+  }
+  .footContainer .footerContent {
+    padding-left: 20px;
+    margin: 0 110px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .user-behavior {
+    padding-left: 70px!important;
+    width: 100%;
+  }
+  .user-behavior .user-behavior-image {
+    width: 372px!important;
+    height: 240px!important;
+    overflow: hidden;
+  }
+  .user-behavior .user-behavior-image .user-behaviorHeader {
+    margin-left: 55px!important;
+    padding-top: 5px!important;
+  }
+  .user-behavior .user-behavior-image .user-behaviorHeader img {
+    padding-top: 5px!important;
+    margin-left: 60px!important;
+  }
+  .user-behavior .user-behavior-image .user-behaviorBg {
+    width: 310px;
+    margin-left: 55px!important;
+    height: 193px;
+  }
+  .user-behavior .user-behavior-image .user-behaviorBg img {
+    width: 300px;
+    transform: translateY(0);
+    animation: autoScrollMobile 10s infinite ease;
+    animation-delay: 1s;
+    vertical-align: middle;
+  }
+  .user-behavior .user-behavior-text {
+    height: 100% !important;
+    padding-top: 30px!important;
+    padding-bottom: 20px!important;
+  }
+  .source-behavior {
+    padding-left: 70px!important;
+    width: 100%;
+  }
+  .source-behavior .source-behavior-image {
+    width: 372px!important;
+    height: 240px!important;
+    overflow: hidden;
+  }
+  .source-behavior .source-behavior-text {
+    height: 100% !important;
+    padding-top: 30px!important;
+    padding-bottom: 20px!important;
+  }
+  .something {
+    height: 1000px!important;
+  }
+  .something .newItems {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 900px!important;
+  }
+  .something .newItems .leftMargin {
+    margin-left: 320px!important;
+  }
+  .something .newItems .middleMargin {
+    margin-left: 320px!important;
+  }
+  .something .newItems .rightMargin {
+    margin-left: 320px!important;
+  }
+  .something .contentBg {
+    margin: 10px calc((100vw - 300px)/2);
+  }
+}
+.right-menu.active .nav {
+  display: block;
+}
+.right-menu .nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  background-color: #00A680;
+}
+.right-menu .nav li {
+  width: 72%;
+  margin: 0 auto;
+}
+.right-menu .nav li a {
+  margin-top: 10px;
+  font-weight: 400;
+  display: block;
+  line-height: 44px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.right-menu .nav li a:hover {
+  color: #F1EF36;
+}
+.right-menu .menu-icon {
+  width: 30px;
+  height: 70px;
+  position: relative;
+}
+.right-menu .menu-icon li {
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  background-color: #ffffff;
+  transform-origin: left center;
+  transition: 0.3s;
+}
+.right-menu .menu-icon li:nth-child(1) {
+  top: 24px;
+}
+.right-menu .menu-icon li:nth-child(2) {
+  top: 35px;
+}
+.right-menu .menu-icon li:nth-child(3) {
+  top: 46px;
+}
+.right-menu .menu-icon.active li:nth-child(1) {
+  transform: rotate(46deg);
+}
+.right-menu .menu-icon.active li:nth-child(2) {
+  opacity: 0;
+}
+.right-menu .menu-icon.active li:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.container-barWrapper {
+  background-image: url("../img/background-container.png");
+}
+.container-barWrapper .container-bug {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container-barWrapper .container-bug .container-max {
+  display: flex;
+  height: 472px;
+  padding-top: 125px;
+}
+.container-barWrapper .container-bug .container-max .video-player {
+  object-fit: fill;
+  position: relative;
+  width: 80vw;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  background-image: url("https://www.fundebug.com/assets/images/landing/video_frame.a100dda4.png");
+  background-repeat: no-repeat;
+}
+.container-barWrapper .container-bug .container-max .video-player .content {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.container-barWrapper .container-bug .container-max .video-player video {
+  position: absolute;
+  display: inline-block;
+}
+.container-barWrapper .container-bug .container-max .fontLeft {
+  text-align: left;
+  width: 1220px;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .notion {
+  padding-top: 50px;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .WebTitle {
+  font-size: 34px;
+  margin-top: -10px;
+  color: #ffffff;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .total-ErrorNumber {
+  font-weight: normal;
+  font-size: 15px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .ErrorNumber {
+  border: none;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .ErrorNumber input {
+  letter-spacing: 5px;
+  padding-left: 10px;
+  width: 155px;
+  font-size: 20px;
+  color: #F1EF36;
+  border: none;
+  outline: medium;
+  background-color: #00A680;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .button-style {
+  padding-top: 22px;
+}
+.container-barWrapper .container-bug .container-max .fontLeft .test-used {
+  font-size: 12px;
+  color: #ffffff;
+  padding-top: 20px;
+}
+.container-barWrapper .container-bug .container-max .fontLeft p {
+  line-height: 2;
+}
+.user-case-containerWrapper {
+  border-bottom: 1px solid #ffffff;
+}
+.user-case-containerWrapper .user-case-container {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 0;
+}
+.user-case-containerWrapper .user-case-container .title {
+  color: #8e8e96;
+  font-size: 18px;
+  padding-top: 150px;
+}
+.user-case-containerWrapper .user-case-container img {
+  padding-left: 50px;
+  vertical-align: middle;
+}
+.Notification {
+  margin-top: -20px !important;
+  z-index: 10;
+  position: relative;
+  color: #ffffff;
+}
+.Notification .NotificationContainer {
+  text-align: left!important;
+}
+.productContentWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.productContentWrapper .productContent {
+  height: 250px;
+  width: 1170px;
+  margin: 30px auto;
+  left: 100%;
+}
+.productContentWrapper .productContent .fullStack {
+  width: 1170px / 4;
+  text-align: center;
+}
+.productContentWrapper .productContent .fullStack img {
+  width: 80%;
+  vertical-align: middle;
+}
+.productContentWrapper .productContent .fullStack .productItemTitle {
+  padding-top: 15px;
+  font-size: 22px;
+  color: #333333;
+}
+.productContentWrapper .productContent .fullStack .productItemContent {
+  font-size: 16px;
+  color: #666;
+}
+.productContentWrapper .productContent .realTime {
+  width: 1170px / 4;
+  text-align: center;
+}
+.productContentWrapper .productContent .realTime img {
+  width: 80%;
+  vertical-align: middle;
+}
+.productContentWrapper .productContent .realTime .productItemTitle {
+  padding-top: 15px;
+  font-size: 22px;
+  color: #333333;
+}
+.productContentWrapper .productContent .realTime .productItemContent {
+  font-size: 16px;
+  color: #666;
+}
+.productContentWrapper .productContent .intelligent {
+  width: 1170px / 4;
+  text-align: center;
+}
+.productContentWrapper .productContent .intelligent img {
+  width: 80%;
+  vertical-align: middle;
+}
+.productContentWrapper .productContent .intelligent .productItemTitle {
+  padding-top: 15px;
+  font-size: 22px;
+  color: #333333;
+}
+.productContentWrapper .productContent .intelligent .productItemContent {
+  font-size: 16px;
+  color: #666;
+}
+.productContentWrapper .productContent .safe {
+  width: 1170px / 4;
+  text-align: center;
+}
+.productContentWrapper .productContent .safe img {
+  width: 80%;
+  vertical-align: middle;
+}
+.productContentWrapper .productContent .safe .productItemTitle {
+  padding-top: 15px;
+  font-size: 22px;
+  color: #333333;
+}
+.productContentWrapper .productContent .safe .productItemContent {
+  font-size: 16px;
+  color: #666;
+}
+.productContentWrapper .productContent p {
+  padding-top: 20px;
+}
+.user-behaviorWrapper .user-behavior {
+  max-width: 1200px;
+  width: 1170px;
+  margin: 20px auto;
+  display: flex;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-image {
+  width: 640px;
+  height: 406px;
+  background: url("https://www.fundebug.com/assets/images/landing/user_behavior_bg.8330b884.png") no-repeat;
+  background-size: 100%;
+  box-shadow: 0 0 100px rgba(123, 154, 126, 0.2);
+  border-radius: 10px;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-image .user-behaviorHeader img {
+  width: 80%;
+  margin-top: 33px;
+  margin-left: 95px;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-image .user-behaviorBg {
+  display: block;
+  width: 540px;
+  height: 320px;
+  overflow: hidden;
+  margin-left: 96px;
+}
+img.user-behaviorWrapper .user-behavior .user-behavior-image .user-behaviorBg:hover {
+  animation-play-state: paused;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-image .user-behaviorBg img {
+  animation: autoScroll 10s infinite ease;
+  animation-delay: 1s;
+}
+@keyframes autoScroll {
+  50% {
+    transform: translateY(-370px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.user-behaviorWrapper .user-behavior .user-behavior-people {
+  width: 80px;
+  height: 188px;
+  background: url("../img/user-behavior-people.png") no-repeat;
+  margin-top: 338px;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-text {
+  width: 411px;
+  height: 406px;
+  margin-left: 20px;
+  padding-top: 100px;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-text .details-title {
+  color: #396476;
+  font-size: 32px;
+  font-weight: 500;
+}
+.user-behaviorWrapper .user-behavior .user-behavior-text .details-content {
+  padding-top: 30px;
+  color: #396476;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+.source-map .source-behavior {
+  max-width: 1200px;
+  width: 1170px;
+  margin: 20px auto;
+  display: flex;
+}
+.source-map .source-behavior .source-behavior-image {
+  width: 620px;
+  height: 400px;
+  background: url("https://www.fundebug.com/assets/images/landing/source_map_bg.f0a0528c.png") no-repeat;
+  background-size: 100%;
+  box-shadow: 0 0 100px rgba(123, 154, 126, 0.2);
+  border-radius: 10px;
+  padding-top: 33px;
+  padding-left: 18px;
+  overflow: hidden;
+}
+.source-map .source-behavior .source-behavior-image img {
+  width: 100%;
+}
+.source-map .source-behavior .source-behavior-text {
+  width: 411px;
+  height: 406px;
+  margin-left: 20px;
+  padding-top: 100px;
+}
+.source-map .source-behavior .source-behavior-text .details-title {
+  color: #396476;
+  font-size: 32px;
+  font-weight: 500;
+}
+.source-map .source-behavior .source-behavior-text .details-content {
+  padding-top: 30px;
+  color: #396476;
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+.source-map .source-behavior .source-behavior-people {
+  width: 80px;
+  height: 188px;
+  background: url("../img/source-map-people.png") no-repeat;
+  margin-top: 338px;
+}
+.something .somethingWrapper {
+  max-width: 1200px;
+  z-index: 4;
+  width: 100vw;
+  text-align: left;
+  margin: auto;
+}
+.something .somethingWrapper .newTitle {
+  padding-top: 66px;
+  margin-top: 40px;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+}
+.something .somethingWrapper .newItems {
+  height: 400px;
+  width: 1170px;
+  margin: 100px calc((100vw - 1170px)/12) 60px;
+  display: flex;
+}
+.something .somethingWrapper .newItems .contentBg {
+  background: #fff;
+  width: 310px;
+  height: 280px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.something .somethingWrapper .newItems .contentBg .newsTitle {
+  font-size: 18px;
+  margin: 25px 0 32px 28px;
+  padding: 0;
+  color: #333;
+}
+.something .somethingWrapper .newItems .contentBg ul {
+  margin-left: 0;
+  padding: 0;
+}
+.something .somethingWrapper .newItems .contentBg ul li {
+  margin: 18px 10px;
+  color: #666;
+}
+.something .somethingWrapper .newItems .contentBg ul li a {
+  color: #666;
+}
+.something .somethingWrapper .newItems .contentBg ul li a:hover {
+  text-decoration: underline;
+}
+.something .somethingWrapper .newItems .contentBg .moreNews a {
+  display: block;
+  width: 100%;
+  padding: 17px 0;
+  border-top: 1px solid #ebebeb;
+  text-align: center;
+  cursor: pointer;
+  color: inherit;
+}
+.something .somethingWrapper .newItems .contentBg .moreNews a:hover {
+  text-decoration: none;
+  background-color: #50D6AC;
+  color: #ffffff;
+}
+.something .somethingWrapper .newItems .leftMargin {
+  margin-right: calc((1170px - 930px)/4);
+}
+.something .somethingWrapper .newItems .middleMargin {
+  margin-left: calc((1170px - 930px)/4);
+  margin-right: calc((1170px - 930px)/4);
+}
+.something .somethingWrapper .newItems .rightMargin {
+  margin-left: calc((1170px - 930px)/4);
+}
+.footCustom {
+  background-color: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: #9e9ea6;
+  min-height: 350px;
+}
+.footCustom .footContainer {
+  padding-bottom: 0;
+  padding-top: 40px;
+}
+.footCustom .footContainer .footerContent {
+  font-size: 14px;
+}
+.footCustom .footContainer .footerContent .content_Container {
+  padding: 5px 0;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footCustom .footContainer .footerContent .content_Container .footer_column {
+  display: block;
+  float: left;
+  width: 25%;
+  vertical-align: top;
+}
+.footCustom .footContainer .footerContent .content_Container .footer_column .column_title {
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+.footCustom .footContainer .footerContent .content_Container .footer_column .item_link {
+  display: block;
+  line-height: 2em;
+  font-weight: 400;
+  text-decoration: none;
+}
+.footCustom .footContainer .footerContent .content_Container .footer_column .item_link a {
+  color: #9e9ea6;
+}
+.footCustom .footContainer .relation_picture {
+  padding: 5px 0;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 150px;
+}
+.footCustom .footContainer .relation_picture .picture {
+  float: left;
+  width: 45px;
+  height: 45px;
+}
+.footCustom .footContainer #picture_qq .picture_qq {
+  display: none;
+}
+.footCustom .footContainer #picture_weixin {
+  background-image: url('https://www.fundebug.com/assets/images/weixin.none.edac81de.svg');
+  width: 38px;
+  height: 38px;
+  margin-right: 5px;
+}
+.footCustom .footContainer #picture_weixin .picture-weiChat {
+  display: none;
+}
+.footCustom .footContainer #picture_weixin:hover .picture-weiChat {
+  padding-top: 40px;
+  display: block;
+  width: 300%;
+}
+.footCustom .footContainer #picture_weibo {
+  background-image: url('https://www.fundebug.com/assets/images/weibo.none.c2708276.svg');
+  width: 38px;
+  height: 38px;
+}
+.footCustom .footContainer .footnote {
+  background-color: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+.footCustom .footContainer .footnote .copyright {
+  padding-top: 1em;
+  padding-bottom: 2em;
+  text-align: center;
+  font-size: 12px;
+  background-size: cover;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+fooot a {
+  color: #9aa4af;
+  font-weight: 700;
+}
+/*# sourceMappingURL=funDebugStyle.css.map */

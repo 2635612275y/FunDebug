@@ -1,0 +1,859 @@
+@baseColor : #00A680; //设置页面总体需要颜色
+@menuColor : #ffffff; //菜单字体颜色
+@errorColor : #F1EF36; //错误监听变化数量字体颜色
+@grayColor : #666;//灰色
+/*导航栏*/
+.top-bar-wrapper{
+    background-color: @baseColor;
+    position: fixed;
+    top: 0px;right: 0;left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.top-bar{
+    //指定最大宽度
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: @baseColor;
+    .right-menu{
+        .nav{
+            .success-login{
+                position: relative;
+                .success-login-type{
+                    min-width: 45px;
+                    min-height: 50px;
+                    top: 50px;
+                    position: absolute;
+                    display: none;
+                    text-align: center;
+                    li{
+                        a{
+                            margin-top: 0;
+                            &:hover{
+                                color: @errorColor;
+                            }
+                        }
+                    }
+                }
+                button{
+                    &.active{
+                        &~.success-login-type{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.gd{
+    width: 480px;
+    height: 70px;
+    background-color: @baseColor;
+}
+//图标logo OVER
+.logo{
+    a{
+        width: 100px;
+        height: 50px;
+    }
+}
+//设置媒体查询 OVER
+@media only screen{
+    //bar
+    //断点 991px
+    @media(min-width: 991px){
+        //隐藏菜单图标
+        .right-menu{
+            //菜单自动增长，利用富余空间
+            flex: auto;
+            //显示菜单
+            .nav{
+                list-style-type: none;
+                display: flex!important;
+                position: static!important;
+                margin-bottom: 10px;
+                li{
+                    width: auto;
+                    a{
+                        text-align: right;
+                        cursor: pointer;
+                        font-size: 15px!important;
+                    }
+                }
+            }
+            //关闭菜单图标
+            .menu-icon{
+                display: none;
+            }
+        }
+    }
+    //1200px
+    @media(max-width: 1200px){
+        //container-bug媒体查询
+        .container-max{
+            flex-direction: column;
+            .fontLeft{
+                padding-left: 140px;
+                .notion{
+                    padding-left: 50px!important;
+                    padding-top: 0px!important;
+                }
+                .WebTitle{
+                    font-size: 20px!important;
+                    margin-top: -10px!important;
+                }
+                .total-ErrorNumber{
+                    padding-left: 35px;
+                    font-size: 16px;
+                }
+                .ErrorNumber{
+                    input{
+                        font-size: 18px!important;
+                    }
+                }
+                .button-style{
+                    padding-top: 8px!important;
+                    padding-left: 80px!important;
+                }
+                .test-used{
+                    padding-top: 2px!important;
+                }
+            }
+        }
+        //付费客户媒体查询
+        .user-case-container{
+            flex-direction: column;
+            .row{
+                .item{
+                    img{
+                        padding-left: 0!important;
+                        max-width: 90%;
+                    }
+                }
+            }
+            .title{
+                width: 100%;
+                padding-top: 21px!important;
+            }
+        }
+        //全栈、实时、智能、安全媒体查询
+        .productContentWrapper{
+            flex-direction: column;
+            margin: 0 auto;
+            padding-left: 120px;
+            //设置排版方式
+            .productContent{
+                display: flex;
+            }
+        }
+        //用户行为媒体查询
+        .user-behavior{
+            flex-direction: column;
+            .user-behavior-image{
+                margin: 0 15px;
+            }
+            .user-behavior-people{
+                display: none;
+            }
+            .user-behavior-text{
+                margin: 0 auto;
+                height: 180px!important;
+            }
+        }
+        //source-bug 部分媒体查询
+        .source-behavior{
+            flex-direction: column;
+            .source-behavior-image{
+                margin: 0 15px;
+            }
+            .source-behavior-people{
+                display: none;
+            }
+            .source-behavior-text{
+                height: 180px!important;
+                margin: 0 auto;
+            }
+        }
+        //新闻1200px响应式
+        .something{
+            .newItems{
+                padding-left: 70px;
+                margin: 90px calc((82vw - 960px)/2) 60px!important;
+                .leftMargin{
+                    margin-right: 10px!important;
+                }
+                .middleMargin{
+                    margin-left: 10px!important;
+                    margin-right: 10px!important;
+                }
+                .rightMargin{
+                    margin-left: 10px!important;
+                }
+            }
+        }
+        //尾部响应式
+        .footContainer{
+            .footerContent{
+                padding-left: 20px;
+                margin: 0 110px;
+            }
+        }
+    }
+    //992px
+    @media(max-width: 991px){
+        //用户行为
+        .user-behavior{
+            padding-left: 70px!important;
+            width: 100%;
+            .user-behavior-image{
+                width: 372px!important;
+                height: 240px!important;
+                overflow: hidden;
+                .user-behaviorHeader{
+                    margin-left: 55px!important;
+                    padding-top: 5px!important;
+                    img{
+                        padding-top: 5px!important;
+                        margin-left: 60px!important;
+                    }
+                }
+                .user-behaviorBg{
+                    width: 310px;
+                    margin-left: 55px!important;
+                    height: 193px;
+                    img{
+                        width: 300px;
+                        transform: translateY(0);
+                        animation: autoScrollMobile 10s infinite ease;
+                        animation-delay: 1s;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .user-behavior-text{
+                height: 100% !important;
+                padding-top: 30px!important;
+                padding-bottom: 20px!important;
+            }
+        }
+        //source-bug 部分媒体查询
+        .source-behavior{
+            padding-left: 70px!important;
+            width: 100%;
+            .source-behavior-image{
+                width: 372px!important;
+                height: 240px!important;
+                overflow: hidden;
+            }
+            .source-behavior-text{
+                height: 100% !important;
+                padding-top: 30px!important;
+                padding-bottom: 20px!important;
+            }
+        }
+        //新闻992px响应式
+        .something{
+            height: 1000px!important;
+            .newItems{
+                flex-direction: column;
+                margin: 0;
+                width: 100%;
+                height: 900px!important;
+                .leftMargin{
+                    margin-left: 320px!important;
+                }
+                .middleMargin{
+                    margin-left: 320px!important;
+                }
+                .rightMargin{
+                    margin-left: 320px!important;
+                }
+            }
+            .contentBg{
+                margin: 10px calc((100vw - 300px)/ 2);
+            }
+        }
+    }
+}
+//右侧导航栏 OVER
+.right-menu{
+    &.active{
+        .nav{
+            //显示隐藏菜单
+            display: block;
+        }
+    }
+    //设置菜单
+    .nav{
+        //使菜单背景充满整个屏幕
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 0;
+        background-color: @baseColor;
+        //z-index: 10000;
+        li{
+            //调整菜单内容距离
+            width: 72%;
+            margin: 0 auto;
+            a{
+                //设置菜单内容细节
+                margin-top: 10px;
+                font-weight: 400;
+                display: block;
+                line-height: 44px;
+                font-size: 20px;
+                text-decoration: none;
+                color: @menuColor;
+                vertical-align: middle;
+                &:hover{
+                    color: @errorColor;
+                }
+            }
+        }
+    }
+    //菜单图标
+    .menu-icon{
+        width: 30px;
+        height: 70px;
+        position: relative;
+        //导航线
+        li{
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            background-color: @menuColor;
+            //修改变性的原点
+            transform-origin: left center;
+            transition: 0.3s;
+        }
+        li:nth-child(1){
+            top: 24px;
+        }
+        li:nth-child(2){
+            top: 35px;
+        }
+        li:nth-child(3){
+            top: 46px;
+        }
+        &.active{
+            li:nth-child(1){
+                //向下旋转
+                transform: rotate(46deg);
+            }
+            li:nth-child(2){
+                //动态隐藏
+                opacity: 0;
+            }
+            li:nth-child(3){
+                //向上旋转
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+//及时发现bug部分 OVER
+.container-barWrapper{
+    background-image: url("../img/background-container.png");
+    .container-bug{
+        max-width: 1200px;
+        margin: 0 auto;
+        .container-max{
+            display: flex;
+            height: 472px;
+            padding-top: 125px;
+            .video-player {
+                object-fit: fill;
+                position: relative;
+                width: 80vw;
+                left: 0;
+                top: 0;
+                margin: 0 auto;
+                background-image: url("https://www.fundebug.com/assets/images/landing/video_frame.a100dda4.png");
+                background-repeat: no-repeat;
+                .content {
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+                video {
+                    position: absolute;
+                    display: inline-block;
+                }
+            }
+            //左边文字整体样式
+            .fontLeft{
+                text-align: left;
+                width: 1220px;
+                //专业平台监控文字样式
+                .notion{
+                    padding-top: 50px;
+                }
+                //及时发现bug文字样式
+                .WebTitle{
+                    font-size: 34px;
+                    margin-top: -10px;
+                    color: @menuColor;
+                }
+                //累计处理错误文字样式
+                .total-ErrorNumber{
+                    font-weight: normal;
+                    font-size: 15px;
+                    vertical-align: middle;
+                    color: @menuColor;
+                }
+                //变化错误数量input框框消失
+                .ErrorNumber{
+                    border: none;
+                    input{
+                        letter-spacing: 5px;
+                        padding-left: 10px;
+                        width: 155px;
+                        font-size: 20px;
+                        color: #F1EF36;
+                        border: none;
+                        outline: medium;
+                        background-color: @baseColor;
+                    }
+                }
+                .button-style{
+                    padding-top: 22px;
+                }
+                .test-used{
+                    font-size: 12px;
+                    color: @menuColor;
+                    padding-top: 20px;
+                }
+                p{
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+//付费客户部分 OVER
+.user-case-containerWrapper{
+    border-bottom: 1px solid @menuColor;
+    .user-case-container{
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 0;
+        .title{
+            color: #8e8e96;
+            font-size: 18px;
+            padding-top: 150px;
+        }
+        img{
+            padding-left: 50px;
+            vertical-align: middle;
+        }
+    }
+}
+//去除前两个部分的间隙 OVER
+.Notification{
+    margin-top: -20px!important;
+    z-index: 10;
+    position: relative;
+    color: @menuColor;
+    .NotificationContainer{
+        text-align: left!important;
+    }
+}
+//全栈、实时、智能、安全部分 OVER
+.productContentWrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    .productContent{
+        height: 250px;
+        width: 1170px;
+        margin: 30px auto;
+        left: 100%;
+        .fullStack{
+            width: 1170px / 4;
+            text-align: center;
+            img{
+                width: 80%;
+                vertical-align: middle;
+            }
+            .productItemTitle{
+                padding-top: 15px;
+                font-size: 22px;
+                color: #333333;
+            }
+            .productItemContent{
+                font-size: 16px;
+                color: @grayColor;
+            }
+        }
+        .realTime{
+            width: 1170px / 4;
+            text-align: center;
+            img{
+                width: 80%;
+                vertical-align: middle;
+            }
+            .productItemTitle{
+                padding-top: 15px;
+                font-size: 22px;
+                color: #333333;
+            }
+            .productItemContent{
+                font-size: 16px;
+                color: @grayColor;
+            }
+        }
+        .intelligent{
+            width: 1170px / 4;
+            text-align: center;
+            img{
+                width: 80%;
+                vertical-align: middle;
+            }
+            .productItemTitle{
+                padding-top: 15px;
+                font-size: 22px;
+                color: #333333;
+            }
+            .productItemContent{
+                font-size: 16px;
+                color: @grayColor;
+            }
+        }
+        .safe{
+            width: 1170px / 4;
+            text-align: center;
+            img{
+                width: 80%;
+                vertical-align: middle;
+            }
+            .productItemTitle{
+                padding-top: 15px;
+                font-size: 22px;
+                color: #333333;
+            }
+            .productItemContent{
+                font-size: 16px;
+                color: #666;
+            }
+        }
+        p{
+            padding-top: 20px;
+        }
+    }
+}
+//用户行为部分 OVER
+.user-behaviorWrapper{
+    .user-behavior{
+        max-width: 1200px;
+        width: 1170px;
+        margin: 20px auto;
+        display: flex;
+        .user-behavior-image{
+            width: 640px;
+            height: 406px;
+            background: url("https://www.fundebug.com/assets/images/landing/user_behavior_bg.8330b884.png") no-repeat;
+            background-size: 100%;
+            //设置边框阴影
+            box-shadow: 0 0 100px rgba(123,154,126,.2);
+            border-radius: 10px;
+            .user-behaviorHeader{
+                img{
+                    width: 80%;
+                    margin-top: 33px;
+                    margin-left: 95px;
+                }
+            }
+            .user-behaviorBg{
+                display: block;
+                width: 540px;
+                height: 320px;
+                overflow: hidden;
+                margin-left: 96px;
+                img&:hover{
+                    animation-play-state: paused;
+                }
+                //使背景图片上下移动
+                img{
+                    animation: autoScroll 10s infinite ease;
+                    animation-delay: 1s;
+                }
+            }
+            //设置上下移动scroll
+            @keyframes autoScroll{
+                50%{
+                    transform: translateY(-370px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
+        }
+        .user-behavior-people{
+            width: 80px;
+            height: 188px;
+            background: url("../img/user-behavior-people.png") no-repeat;
+            margin-top: 338px;
+        }
+        .user-behavior-text{
+            width: 411px;
+            height: 406px;
+            margin-left: 20px;
+            padding-top: 100px;
+            .details-title{
+                color: #396476;
+                font-size: 32px;
+                font-weight: 500;
+            }
+            .details-content{
+                padding-top: 30px;
+                color: #396476;
+                font-size: 17px;
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+//源码出错部分 OVER
+.source-map {
+    .source-behavior {
+        max-width: 1200px;
+        width: 1170px;
+        margin: 20px auto;
+        display: flex;
+        .source-behavior-image {
+            width: 620px;
+            height: 400px;
+            background: url("https://www.fundebug.com/assets/images/landing/source_map_bg.f0a0528c.png") no-repeat;
+            background-size: 100%;
+            //设置边框阴影
+            box-shadow: 0 0 100px rgba(123, 154, 126, .2);
+            border-radius: 10px;
+            padding-top: 33px;
+            padding-left: 18px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .source-behavior-text {
+            width: 411px;
+            height: 406px;
+            margin-left: 20px;
+            padding-top: 100px;
+
+            .details-title {
+                color: #396476;
+                font-size: 32px;
+                font-weight: 500;
+            }
+
+            .details-content {
+                padding-top: 30px;
+                color: #396476;
+                font-size: 17px;
+                margin: 0 0 10px;
+            }
+        }
+        .source-behavior-people {
+            width: 80px;
+            height: 188px;
+            background: url("../img/source-map-people.png") no-repeat;
+            margin-top: 338px;
+        }
+    }
+}
+//最近新闻部分样式 OVER
+.something{
+    .somethingWrapper{
+        max-width: 1200px;
+        z-index: 4;
+        width: 100vw;
+        text-align: left;
+        margin: auto;
+        .newTitle{
+            padding-top: 66px;//距离顶部66px , 响应式时得修改
+            margin-top: 40px;
+            font-size: 32px;
+            color: @menuColor;
+            font-weight: 400;
+            text-align: center;
+        }
+        .newItems{
+            height: 400px;
+            width: 1170px;
+            margin: 100px calc((100vw - 1170px)/ 12) 60px;
+            display: flex;
+            .contentBg{
+                background: #fff;
+                width: 310px;
+                height: 280px;
+                box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+                transition: all .3s cubic-bezier(.25,.8,.25,1);
+                .newsTitle{
+                    font-size: 18px;
+                    margin: 25px 0 32px 28px;
+                    padding: 0;
+                    color: #333;
+                }
+                ul{
+                    margin-left: 0;
+                    padding: 0;
+                    li{
+                        margin: 18px 10px;
+                        color: #666;
+                        a{
+                            color: #666;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .moreNews{
+                    a{
+                        display: block;
+                        width: 100%;
+                        padding: 17px 0;
+                        border-top: 1px solid #ebebeb;
+                        text-align: center;
+                        cursor: pointer;
+                        color: inherit;
+                        &:hover{
+                            text-decoration: none;
+                            background-color: #50D6AC;
+                            color: @menuColor;
+                        }
+                    }
+                }
+            }
+            .leftMargin{
+                margin-right: calc((1170px - 930px)/ 4);
+            }
+            .middleMargin{
+                margin-left: calc((1170px - 930px)/ 4);
+                margin-right: calc((1170px - 930px)/ 4);
+            }
+            .rightMargin{
+                margin-left: calc((1170px - 930px)/ 4);
+            }
+        }
+    }
+}
+//尾部样式 OVER
+.footCustom{
+    background-color: transparent;
+    border-top: 1px solid rgba(255,255,255,.1);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    color: #9e9ea6;
+    min-height: 350px;
+    .footContainer{
+        padding-bottom: 0;
+        padding-top: 40px;
+        .footerContent{
+            font-size: 14px;
+            .content_Container{
+                padding: 5px 0;
+                overflow: hidden;
+                position: relative;
+                top: 0;
+                max-width: 1170px;
+                margin-right: auto;
+                margin-left: auto;
+                .footer_column{
+                    display: block;
+                    float: left;
+                    width: 25%;
+                    vertical-align: top;
+                    .column_title{
+                        font-size: 18px;
+                        margin-bottom: 1em;
+                    }
+                    .item_link{
+                        display: block;
+                        line-height: 2em;
+                        font-weight: 400;
+                        text-decoration: none;
+                        a{
+                            color: #9e9ea6;
+                        }
+                    }
+                }
+            }
+        }
+        .relation_picture{
+            padding: 5px 0;
+            overflow: hidden;
+            position: relative;
+            top: 0;
+            max-width: 1170px;
+            margin-right: auto;
+            margin-left: auto;
+            min-height: 150px;
+            .picture{
+                float: left;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        #picture_qq{
+            .picture_qq{
+                display: none;
+            }
+        }
+        #picture_weixin{
+            background-image: url('https://www.fundebug.com/assets/images/weixin.none.edac81de.svg');
+            width: 38px;
+            height: 38px;
+            margin-right: 5px;
+            .picture-weiChat{
+                display: none;
+            }
+            &:hover{
+                .picture-weiChat{
+                    padding-top: 40px;
+                    display: block;
+                    width: 300%;
+                }
+            }
+        }
+        #picture_weibo{
+            background-image: url('https://www.fundebug.com/assets/images/weibo.none.c2708276.svg');
+            width: 38px;
+            height: 38px;
+        }
+        .footnote{
+            background-color: rgba(255,255,255,.12);
+            overflow: hidden;
+            .copyright{
+                padding-top: 1em;
+                padding-bottom: 2em;
+                text-align: center;
+                font-size: 12px;
+                background-size: cover;
+                max-width: 1170px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+fooot a{
+    color: #9aa4af;
+    font-weight: 700;
+}
